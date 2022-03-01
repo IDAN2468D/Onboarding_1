@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AppIntroSlider from 'react-native-app-intro-slider';
+import image from '../StyleGide/iamge';
 import { COLORS } from '../StyleGide/colors';
 
 const slides = [
@@ -10,19 +11,16 @@ const slides = [
         title: 'Save time by tracking your studies',
         text: 'Schedule your classes, assignments, quizzes and mor',
         image: require('../image/image_1.png'),
-        backgroundColor: '#59b2ab',
     },
     {
-        title: 'Stay on top of your education',
+        title: 'Set preferences for multiple users from various restaurants!',
         text: 'Reduce your stress, increase your productivity',
         image: require('../image/image_2.png'),
-        backgroundColor: '#febe29',
     },
     {
         title: 'Spend more time doing the things you love',
         text: 'Get started within five minutes',
         image: require('../image/image_3.png'),
-        backgroundColor: '#22bcb5',
     }
 ];
 
@@ -35,9 +33,11 @@ function Onboarding() {
     function _renderItem({ item }) {
         return (
             <View style={styles.slide}>
-                <Image source={item.image} style={styles.image} />
+                <View style={{ paddingHorizontal: 10, paddingVertical: 10, borderRadius: 50, backgroundColor: "white" }}>
+                    <Image source={image.Logo} style={{ width: 50, height: 50 }} />
+                </View>
                 <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.text}>{item.text}</Text>
+                <Image source={item.image} style={styles.image} />
             </View>
         );
     }
@@ -81,7 +81,7 @@ function Onboarding() {
 
     function _renderSkipButton() {
         return (
-            <View style={styles.buttonCircle}>
+            <View style={styles.skip}>
                 <Icon
                     name="play-skip-back-sharp"
                     color="rgba(255, 255, 255, .9)"
@@ -116,20 +116,31 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    skip: {
+        bottom: 750,
+        width: 50,
+        height: 50,
+        backgroundColor: 'rgba(0, 0, 0, .2)',
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     slide: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: COLORS.white,
+        backgroundColor: COLORS.Onboarding,
     },
     image: {
         marginVertical: 60,
     },
     title: {
-        fontSize: 24,
-        color: COLORS.BlueMagenta,
+        fontSize: 30,
+        color: COLORS.white,
+        maxWidth: 300,
         textAlign: "center",
-        marginHorizontal: 60,
+        marginHorizontal: 40,
+        marginTop: 10,
     },
     text: {
         fontSize: 14,

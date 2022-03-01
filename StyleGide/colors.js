@@ -17,7 +17,7 @@ export const COLORS = {
     BlueMartina: "#20d0c4",
     BlueMagenta: "#5117AC",
     Purple: "#8E24AA",
-
+    Onboarding: "#FF6838",
     transparentBlack1: 'rgba(2, 2, 2, 0.1)',
     transparentBlack3: 'rgba(2, 2, 2, 0.3)',
     transparentBlack5: 'rgba(2, 2, 2, 0.5)',

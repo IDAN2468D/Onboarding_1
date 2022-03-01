@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-function DrawerNavigation() {
+
+function Feed() {
     return (
         <View>
-            <Text>DrawerNavigation</Text>
+            <Text>Feed</Text>
         </View>
     )
 }
 
-export default DrawerNavigation
+export default Feed
