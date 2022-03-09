@@ -34,7 +34,7 @@ function Onboarding() {
         return (
             <View style={styles.slide}>
                 <View style={{ paddingHorizontal: 10, paddingVertical: 10, borderRadius: 50, backgroundColor: "white" }}>
-                    <Image source={image.Logo} style={{ width: 50, height: 50 }} />
+                    <Image source={image.Logo_1} style={{ width: 50, height: 50 }} />
                 </View>
                 <Text style={styles.title}>{item.title}</Text>
                 <Image source={item.image} style={styles.image} />
@@ -61,7 +61,7 @@ function Onboarding() {
                     name="md-checkmark"
                     color="rgba(255, 255, 255, .9)"
                     size={24}
-                    onPress={() => navigation.navigate("Home")}
+                    onPress={() => navigation.navigate("Layout")}
                 />
             </View>
         );

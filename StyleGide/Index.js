@@ -1,5 +1,5 @@
 import { COLORS } from '../StyleGide/colors';
-import iamge from './iamge';
+import iamge from '../StyleGide/iamge';
 
 export default {
     COLORS,
