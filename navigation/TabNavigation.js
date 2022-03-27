@@ -61,15 +61,11 @@ const TabButton = (props) => {
 export default function AnimTab3() {
     return (
         <Tab.Navigator
+            initialRouteName='home'
             screenOptions={{
                 headerShown: false,
                 tabBarStyle: {
-                    height: 80,
-                    position: 'absolute',
-                    bottom: 16,
-                    right: 16,
-                    left: 16,
-                    borderRadius: 16
+                    height: 90,
                 }
             }}
         >
